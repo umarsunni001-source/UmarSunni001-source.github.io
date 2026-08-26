@@ -3,16 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LUXE AREWA LIFESTYLE HUB</title>
+
+<meta name="description" content="LUXE AREWA LIFESTYLE HUB — Where Heritage Meets Modern Lifestyle.">
 
 <style>
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: #071525;
   color: white;
@@ -20,132 +26,237 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #071525, #102d4a);
-  border-bottom: 2px solid #d4af37;
+  background: #050e18;
+  border-bottom: 1px solid #d4af37;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .logo {
-  font-size: 34px;
-  font-weight: bold;
-  color: #d4af37;
-  letter-spacing: 2px;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
 }
 
-.hub {
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
   color: white;
-  font-size: 18px;
-  letter-spacing: 4px;
-  margin-top: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.tagline {
-  margin-top: 18px;
+.nav-links a:hover {
   color: #d4af37;
-  font-size: 18px;
-  font-style: italic;
 }
 
 .hero {
-  text-align: center;
-  padding: 70px 20px;
-  background: #0b1f33;
+  padding: 75px 0;
+  background: linear-gradient(135deg, #071525, #12304a);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
 }
 
 .hero h1 {
-  font-size: 40px;
+  margin: 0;
   color: #d4af37;
-  margin-bottom: 15px;
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1;
+}
+
+.hero h2 {
+  letter-spacing: 5px;
+  margin: 15px 0;
+}
+
+.tagline {
+  color: #d4af37;
+  font-size: 21px;
+  font-style: italic;
+  margin: 20px 0;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: auto;
+  color: #d9e2e9;
   font-size: 18px;
-  color: #e5e5e5;
+  max-width: 650px;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,.45));
 }
 
 .button {
   display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
+  padding: 14px 23px;
+  margin: 10px 8px 0 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gold {
   background: #d4af37;
   color: #071525;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
+}
+
+.outline {
+  border: 1px solid #d4af37;
+  color: #d4af37;
 }
 
 section {
-  padding: 55px 20px;
-  max-width: 1100px;
-  margin: auto;
+  padding: 70px 0;
 }
 
-section h2 {
+.title {
   text-align: center;
-  color: #d4af37;
-  margin-bottom: 35px;
-  font-size: 30px;
+  margin-bottom: 40px;
 }
 
-.categories {
+.title h2 {
+  color: #d4af37;
+  font-size: 34px;
+}
+
+.title p {
+  color: #cbd6df;
+}
+
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .card {
   background: #10283e;
+  border: 1px solid #29465e;
+  border-radius: 14px;
   padding: 30px 20px;
-  border-radius: 12px;
-  border: 1px solid #28445c;
   text-align: center;
+}
+
+.card-icon {
+  font-size: 40px;
 }
 
 .card h3 {
   color: #d4af37;
-  margin-bottom: 10px;
 }
 
 .card p {
-  color: #ddd;
+  color: #d3dde5;
 }
 
-.about {
+.lefe {
+  background: #0b1f33;
+}
+
+.lefe-box,
+.about-box {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  max-width: 800px;
+  border: 1px solid #d4af37;
+  border-radius: 18px;
+  padding: 40px 25px;
+}
+
+.about-box {
+  background: #10283e;
 }
 
 .contact {
+  background: #050e18;
   text-align: center;
-  background: #10283e;
-  max-width: none;
 }
 
 .contact p {
-  margin: 10px 0;
+  color: #d3dde5;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.socials a {
+  color: #d4af37;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 footer {
+  background: #02070c;
   text-align: center;
   padding: 30px 20px;
-  background: #050e18;
-  color: #aaa;
+  color: #9eabb5;
 }
 
-.gold {
+footer strong {
   color: #d4af37;
 }
 
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 30px;
+@media (max-width: 800px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .cards {
+    grid-template-columns: 1fr;
   }
 
   .logo {
-    font-size: 27px;
+    width: 70px;
+    height: 70px;
   }
 }
 </style>
@@ -154,120 +265,258 @@ footer {
 <body>
 
 <header>
-  <div class="logo">LUXE AREWA</div>
-  <div class="hub">LIFESTYLE HUB</div>
-  <div class="tagline">Where Heritage Meets Modern Lifestyle.</div>
+<div class="container nav">
+
+<img
+class="logo"
+src="file_000000004c688210891e952bcc4513f9.png"
+alt="LUXE AREWA LIFESTYLE HUB Logo"
+>
+
+<nav class="nav-links">
+<a href="#collections">Collections</a>
+<a href="#lefe">Lefe</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
 </header>
 
-<div class="hero">
-  <h1>Discover Your Lifestyle</h1>
-  <p>
-    Premium fashion, textiles, Lefe & wedding essentials,
-    lifestyle products, phones and technology — all in one trusted destination.
-  </p>
+<section class="hero">
 
-  <a class="button" href="https://wa.me/2349077055272">
-    Order on WhatsApp
-  </a>
+<div class="container hero-content">
+
+<div>
+
+<h1>LUXE AREWA</h1>
+
+<h2>LIFESTYLE HUB</h2>
+
+<div class="tagline">
+Where Heritage Meets Modern Lifestyle.
 </div>
 
-<section>
-  <h2>What We Offer</h2>
+<p>
+Fashion, textiles, Lefe and wedding essentials,
+lifestyle products, phones and technology —
+all brought together in one trusted destination.
+</p>
 
-  <div class="categories">
+<a
+class="button gold"
+href="https://wa.me/2349077055272"
+>
+Order on WhatsApp
+</a>
 
-    <div class="card">
-      <h3>Fashion & Textiles</h3>
-      <p>
-        Atampa, Lace, Shadda, Caftan, Abayas,
-        Jallabiyas and more.
-      </p>
-    </div>
+<a
+class="button outline"
+href="#collections"
+>
+Explore Collections
+</a>
 
-    <div class="card">
-      <h3>Lefe & Wedding Essentials</h3>
-      <p>
-        Complete lifestyle essentials for Lefe,
-        weddings and special occasions.
-      </p>
-    </div>
+</div>
 
-    <div class="card">
-      <h3>Phones & Technology</h3>
-      <p>
-        iPhone, Samsung, smartwatches,
-        gadgets and technology accessories.
-      </p>
-    </div>
+<div class="hero-logo">
 
-    <div class="card">
-      <h3>Lifestyle & Accessories</h3>
-      <p>
-        Footwear, travel bags, watches,
-        eyewear, perfumes and more.
-      </p>
-    </div>
+<img
+src="file_000000004c688210891e952bcc4513f9.png"
+alt="LUXE AREWA LIFESTYLE HUB"
+>
 
-  </div>
+</div>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Why Choose LUXE AREWA?</h2>
+<section id="collections">
 
-  <div class="categories">
+<div class="container">
 
-    <div class="card">
-      <h3>Quality</h3>
-      <p>We focus on products that bring value and style.</p>
-    </div>
+<div class="title">
 
-    <div class="card">
-      <h3>Convenience</h3>
-      <p>Find different lifestyle needs in one destination.</p>
-    </div>
+<h2>Explore Our Collections</h2>
 
-    <div class="card">
-      <h3>Trusted Service</h3>
-      <p>We are committed to serving our customers professionally.</p>
-    </div>
+<p>
+Quality, style and convenience for heritage and modern living.
+</p>
 
-    <div class="card">
-      <h3>Nationwide Delivery</h3>
-      <p>We serve customers beyond Lagos.</p>
-    </div>
+</div>
 
-  </div>
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">👗</div>
+<h3>Fashion & Textiles</h3>
+<p>
+Atampa, Lace, Shadda, Caftan,
+Abayas, Jallabiyas and more.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">💍</div>
+<h3>Lefe & Wedding</h3>
+<p>
+Essentials for Lefe, weddings
+and special occasions.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">📱</div>
+<h3>Phones & Technology</h3>
+<p>
+Phones, smartwatches, gadgets
+and technology accessories.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">👜</div>
+<h3>Lifestyle & Accessories</h3>
+<p>
+Footwear, bags, watches,
+perfumes and more.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="about">
-  <h2>About LUXE AREWA</h2>
+<section id="lefe" class="lefe">
 
-  <p>
-    LUXE AREWA LIFESTYLE HUB is a lifestyle brand built around
-    heritage, quality and modern living. Our vision is to make
-    fashion, wedding essentials, lifestyle products and technology
-    easier to access from one trusted destination.
-  </p>
+<div class="container">
+
+<div class="lefe-box">
+
+<div class="title">
+<h2>Lefe Made Easier</h2>
+</div>
+
+<p>
+Build your Lefe gradually and according to your budget.
+Find textiles, Lace, Atampa, Abayas, footwear,
+perfumes, watches, accessories and other lifestyle
+essentials in one destination.
+</p>
+
+<a
+class="button gold"
+href="https://wa.me/2349077055272?text=Hello%20LUXE%20AREWA%2C%20I%20want%20to%20ask%20about%20Lefe."
+>
+Ask About Lefe
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="contact">
-  <h2>Connect With Us</h2>
+<section id="about">
 
-  <p>📍 Lagos, Nigeria</p>
-  <p>📞 08160405663</p>
-  <p>💬 WhatsApp: 09077055272</p>
-  <p>🌐 luxearewa.com.ng</p>
+<div class="container">
 
-  <a class="button" href="https://wa.me/2349077055272">
-    Chat With Us
-  </a>
+<div class="title">
+<h2>About LUXE AREWA</h2>
+</div>
+
+<div class="about-box">
+
+<p>
+LUXE AREWA LIFESTYLE HUB is a lifestyle brand
+built around heritage, quality, convenience
+and modern living.
+</p>
+
+<p>
+Our vision is to make fashion, textiles, wedding
+essentials, lifestyle products and technology
+easier to discover and access from one trusted
+destination.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Connect With Us</h2>
+
+<p>
+Ready to shop or ask a question?
+We're here to help.
+</p>
+
+</div>
+
+<p>📍 Lagos, Nigeria</p>
+
+<p>📞 08160405663</p>
+
+<p>💬 WhatsApp: 09077055272</p>
+
+<p>🌐 luxearewa.com.ng</p>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/luxearewahub">
+Instagram
+</a>
+
+<a href="https://www.tiktok.com/@Luxearewa">
+TikTok
+</a>
+
+<a href="https://www.facebook.com/Luxearewahub">
+Facebook
+</a>
+
+<a href="https://www.youtube.com/@Luxearewahub">
+YouTube
+</a>
+
+</div>
+
+<a
+class="button gold"
+href="https://wa.me/2349077055272"
+>
+Chat on WhatsApp
+</a>
+
+</div>
+
 </section>
 
 <footer>
-  <p class="gold">LUXE AREWA LIFESTYLE HUB</p>
-  <p>Where Heritage Meets Modern Lifestyle.</p>
-  <p>© 2026 LUXE AREWA LIFESTYLE HUB. All Rights Reserved.</p>
+
+<strong>LUXE AREWA LIFESTYLE HUB</strong>
+
+<br>
+
+Where Heritage Meets Modern Lifestyle.
+
+<br><br>
+
+© 2026 LUXE AREWA LIFESTYLE HUB.
+All Rights Reserved.
+
 </footer>
 
 </body>
-  </html>
+</html>
