@@ -620,7 +620,8 @@ Where Heritage Meets Modern Lifestyle.<br><br>
 async function loadProducts() {
   const { data, error } = await supabaseClient
     .from("products")
-    .select("*");
+    .select("*")
+    .eq("available", true);
 
   if (error) {
     console.error("Error loading products:", error);
@@ -628,8 +629,7 @@ async function loadProducts() {
   }
 
   console.log("Products loaded:", data);
-}
-
+  }
 loadProducts();  
 </script>
 </body>
