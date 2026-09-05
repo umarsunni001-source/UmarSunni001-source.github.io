@@ -620,6 +620,7 @@ Where Heritage Meets Modern Lifestyle.<br><br>
   alert("Supabase client created");
 async function loadProducts() {
   alert("Starting database query");
+ alert("About to contact Supabase"); 
   const { data, error } = await supabaseClient
     .from("products")
     .select("*")
