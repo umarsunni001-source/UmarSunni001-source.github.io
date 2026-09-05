@@ -629,7 +629,7 @@ async function loadProducts() {
     console.error("Error loading products:", error);
     return;
   }
-
+alert("Supabase error: " + error.message);
   console.log("Products loaded:", data);
   alert("Query finished");
   alert("Supabase products loaded: " + data.length);
