@@ -619,26 +619,23 @@ Where Heritage Meets Modern Lifestyle.<br><br>
   );
   alert("Supabase client created");
 async function loadProducts() {
-  alert("Starting database query");
- alert("About to contact Supabase");
-  alert("Testing direct connection");
-  alert("About to run Supabase SELECT");
-  alert("Running SELECT now...");
+  console.log("Loading products...");
+
   const { data, error } = await supabaseClient
     .from("products")
     .select("*");
 
   if (error) {
-    console.error("Error loading products:", error);
-    return;
+    console.error("Supabase error:", error);
     alert("Supabase error: " + error.message);
+    return;
   }
+
   console.log("Products loaded:", data);
-  alert("Query finished");
-  alert("Rows received: " + data.length);
-  alert("Supabase products loaded: " + data.length);
-  }
-loadProducts();  
+  alert("Products loaded: " + data.length);
+}
+
+loadProducts();
 </script>
 </body>
 </html>
