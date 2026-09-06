@@ -624,8 +624,7 @@ async function loadProducts() {
   alert("Testing direct connection");
   const { data, error } = await supabaseClient
     .from("products")
-    .select("*")
-    .eq("available", true);
+    .select("*");
 
   if (error) {
     console.error("Error loading products:", error);
