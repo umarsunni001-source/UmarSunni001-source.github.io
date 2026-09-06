@@ -622,6 +622,7 @@ async function loadProducts() {
   alert("Starting database query");
  alert("About to contact Supabase");
   alert("Testing direct connection");
+  alert("About to run Supabase SELECT");
   const { data, error } = await supabaseClient
     .from("products")
     .select("*");
