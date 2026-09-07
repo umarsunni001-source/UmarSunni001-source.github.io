@@ -617,9 +617,7 @@ Where Heritage Meets Modern Lifestyle.<br><br>
     SUPABASE_URL,
     SUPABASE_KEY
   );
-  alert("Supabase client created");
 async function loadProducts() {
-  console.log("Loading products...");
 
   const { data, error } = await supabaseClient
     .from("products")
@@ -631,8 +629,6 @@ async function loadProducts() {
     return;
   }
 
-  console.log("Products loaded:", data);
-  alert("Products loaded: " + data.length);
 }
 
 loadProducts();
