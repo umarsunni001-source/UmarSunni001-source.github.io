@@ -122,7 +122,8 @@ footer strong{color:#d4af37}
 
 <div id="footwear" class="category">
 <h2 class="category-title">👟 Footwear</h2>
-<div class="products">
+<div id="supabase-products"></div>
+  <div class="products">
 
 <div class="product">
 <div class="product-image">Product photo coming soon</div>
@@ -618,7 +619,6 @@ Where Heritage Meets Modern Lifestyle.<br><br>
     SUPABASE_KEY
   );
 async function loadProducts() {
-
   const { data, error } = await supabaseClient
     .from("products")
     .select("*");
@@ -629,8 +629,22 @@ async function loadProducts() {
     return;
   }
 
+  console.log("Products from Supabase:", data);
+const container = document.getElementById("supabase-products");
+container.innerHTML = "";
+  data.forEach(product => {
+    const div = document.createElement("div");
+    div.className = "product";
+ div.innerHTML = `
+ <h3>${product.name}</h3>
+ <p>₦${product.price}</p>
+ <p>${product.description || ""}</p>
+ `;
+    container.appendChild(div);
+  container.appendChild(div);  
+    });
 }
-
+}
 loadProducts();
 </script>
 </body>
