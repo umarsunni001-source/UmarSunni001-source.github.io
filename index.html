@@ -638,7 +638,7 @@ container.innerHTML = "";
  div.innerHTML = `
 <h3>${product.Name}</h3>
 <p>${product.Category}</p>
- <p>₦${product.Price}</p>
+<p>₦${Number(product.Price).toLocaleString()}</p>
  `;
     container.appendChild(div);
     });
