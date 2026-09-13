@@ -47,6 +47,7 @@
   const name = document.getElementById("productName").value;
   const price = Number(document.getElementById("productPrice").value);
   const category = document.getElementById("productCategory").value;
+  const description = document.getElementById("productDescription").value;
   const available = document.getElementById("productAvailable").value === "true";
 
   const { data, error } = await supabaseClient
@@ -55,8 +56,9 @@
       {
         Name: name,
         Price: price,
-        Category: category,
-        Available: available
+       Category: category,
+       description: description,
+       Available: available
       }
     ]);
 
