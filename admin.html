@@ -49,6 +49,7 @@
 
   const name = document.getElementById("productName").value;
   const price = Number(document.getElementById("productPrice").value);
+  const oldPrice = Number(document.getElementById("productOldPrice").value);
   const category = document.getElementById("productCategory").value;
   const description = document.getElementById("productDescription").value;
   const available = document.getElementById("productAvailable").value === "true";
@@ -57,11 +58,10 @@
     .from("products")
     .insert([
       {
-        Name: name,
-        Price: price,
-       Category: category,
-       description: description,
-       Available: available
+Name: name,
+Price: price,
+old_price: oldPrice,
+Category: category,
       }
     ]);
 
