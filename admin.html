@@ -39,6 +39,32 @@
     SUPABASE_URL,
     SUPABASE_KEY
   );
+  document.querySelector("button").addEventListener("click", async () => {
+
+  const name = document.getElementById("productName").value;
+  const price = Number(document.getElementById("productPrice").value);
+  const category = document.getElementById("productCategory").value;
+  const available = document.getElementById("productAvailable").value === "true";
+
+  const { data, error } = await supabaseClient
+    .from("products")
+    .insert([
+      {
+        Name: name,
+        Price: price,
+        Category: category,
+        Available: available
+      }
+    ]);
+
+  if (error) {
+    alert("Error: " + error.message);
+    console.error(error);
+    return;
+  }
+
+  alert("Product added successfully!");
+});
 </script>
 
 </body>
