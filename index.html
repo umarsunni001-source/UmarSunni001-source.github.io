@@ -630,7 +630,6 @@ async function loadProducts() {
   }
 
   console.log("Products from Supabase:", data);
-  alert(JSON.stringify(data[0]));
 const container = document.getElementById("supabase-products");
 container.innerHTML = "";
   data.forEach(product => {
