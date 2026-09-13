@@ -51,6 +51,32 @@ label>Stock Quantity</label><br>
     SUPABASE_KEY
   );
   document.querySelector("button").addEventListener("click", async () => {
+    const imageFile = document.getElementById("productImage").files[0];
+
+  if (!imageFile) {
+    alert("Please select a product image.");
+    return;
+  }
+
+  const fileName = Date.now() + "-" + imageFile.name;
+
+  const { error: uploadError } = await supabaseClient
+    .storage
+    .from("product-images")
+    .upload(fileName, imageFile);
+
+  if (uploadError) {
+    alert("Image upload error: " + uploadError.message);
+    console.error(uploadError);
+    return;
+  }
+
+  const { data: publicUrlData } = supabaseClient
+    .storage
+    .from("product-images")
+    .getPublicUrl(fileName);
+
+  const imageUrl = publicUrlData.publicUrl;
 
   const name = document.getElementById("productName").value;
   const price = Number(document.getElementById("productPrice").value);
