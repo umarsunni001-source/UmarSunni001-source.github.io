@@ -55,15 +55,20 @@ label>Stock Quantity</label><br>
   const category = document.getElementById("productCategory").value;
   const description = document.getElementById("productDescription").value;
   const available = document.getElementById("productAvailable").value === "true";
-
+const stockQuantity = Number(document.getElementById("productStockQuantity").value);
   const { data, error } = await supabaseClient
     .from("products")
     .insert([
       {
-Name: name,
-Price: price,
-old_price: oldPrice,
-Category: category,
+{
+  Name: name,
+  Price: price,
+  old_price: oldPrice,
+  Category: category,
+  description: description,
+  Available: available,
+  stock_quantity: stockQuantity
+}
       }
     ]);
 
